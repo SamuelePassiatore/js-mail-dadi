@@ -54,6 +54,33 @@ if (player > cpu) {
   playerNumber.innerHTML = player;
   cpuNumber.innerHTML = cpu;
   resultElement.innerHTML = content;
+
+
+/****************************************
+*****************************************/
+
+/* ESERCIZIO 2 - Finta login
+Inventa una lista di email autorizzate
+Chiedi all’utente la sua email, con un piccolo form.
+controlla che sia nella lista di chi può accedere,
+stampa un messaggio appropriato sull’esito del controllo.
+*/
+
+/* 
+1 - Prendo gli elementi dal DOM;
+2 - Crea un array con tre email autorizzate;
+3 - Aggancio l'event listener al button invia;
+  3a - Recupero valore dell'input;
+  3b - Validazione degli input raccolti;
+  3c - Creo il ciclo for delle email autorizzate;
+  3d - Genero un condizionale if riguardo il confronto tra le mail.
+4 - Stampo un messaggio sull'esito del controllo;
+*/
+
+// 1 - Prendo gli elementi dal DOM;
+const inputEmail = document.getElementById('email');
+const button = document.getElementById('button');
+
   
 
 
