@@ -117,6 +117,9 @@ button.addEventListener('click', function () {
     } else {
         console.log("Spiacente, la tua email non è autorizzata all'accesso :(");
     }
+    // 3f - Svuoto il campo email;
+    // const input email
+    inputEmail.value = '';
 
 });
 
