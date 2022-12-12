@@ -51,9 +51,9 @@ if (player > cpu) {
   console.log(content);
 
 // 6 - Stampo in pagina i due numeri e il risultato.
-  playerNumber.innerHTML = player;
-  cpuNumber.innerHTML = cpu;
-  resultElement.innerHTML = content;
+  playerNumber.innerHTML = 'Numero giocatore: ' + player;
+  cpuNumber.innerHTML = 'Numero cpu: ' + cpu;
+  resultElement.innerHTML = `<strong>${content}</strong>`;
 
 
 /****************************************
@@ -130,7 +130,7 @@ button.addEventListener('click', function () {
     inputEmail.value = '';
 
     // 3g - Stampo un messaggio sull'esito del controllo;
-    message.innerHTML = content;
+    message.innerHTML = `<strong>${content}</strong>`;
 
 });
 
