@@ -20,5 +20,12 @@ const playerNumber = document.getElementById('player-number');
 const cpuNumber = document.getElementById('cpu-number');
 const resultElement = document.getElementById('result');
 
+// 2 - Creo due array, uno per il giocatore e l'altro per il computer.
+const player = [];
+const cpu = [];
+
+
+
+
 
 
