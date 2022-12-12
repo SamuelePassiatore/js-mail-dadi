@@ -15,5 +15,10 @@ Stampiamo in pagina i due tiri e il risultato.
 6 - Stampo in pagina i due numeri e il risultato.
 */
 
+// 1 - Prendo gli elementi dal DOM;
+const playerNumber = document.getElementById('player-number');
+const cpuNumber = document.getElementById('cpu-number');
+const resultElement = document.getElementById('result');
+
 
 
