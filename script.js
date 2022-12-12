@@ -89,6 +89,19 @@ const emailAuthorized = [
 ];
 ////console.log(emailAuthorized);
 
+// 3 - Aggancio l'event listener al button invia;
+button.addEventListener('click', function () {
+    // 3a - Recupero valore dell'input;
+    const userEmail = inputEmail.value.trim();
+    console.log(userEmail);
+    // 3a2 - Validazione degli input raccolti;
+    if(!userEmail) {
+        alert('Devi inserire un indirizzo email');
+        return;
+    }
+});
+
+
 
 
 
