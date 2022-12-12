@@ -81,6 +81,18 @@ stampa un messaggio appropriato sull’esito del controllo.
 const inputEmail = document.getElementById('email');
 const button = document.getElementById('button');
 
+// 2 - Crea un array con tre email autorizzate;
+const emailAuthorized = [
+"einstein@gmail.com", 
+"platone@gmail.com", 
+"mozart@gmail.com"
+];
+////console.log(emailAuthorized);
+
+
+
+
+
   
 
 
