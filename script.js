@@ -73,8 +73,9 @@ stampa un messaggio appropriato sull’esito del controllo.
   3a - Recupero valore dell'input;
   3b - Validazione degli input raccolti;
   3c - Creo il ciclo for delle email autorizzate;
-  3d - Genero un condizionale if riguardo il confronto tra le mail.
-  3e - Svuoto il campo;
+  3d - Genero un condizionale if riguardo il confronto tra le mail;
+  3e - Genero un condizionale if sul messaggio da mostrare;
+  3f - Svuoto il campo email;
 4 - Stampo un messaggio sull'esito del controllo;
 
 */
@@ -98,16 +99,23 @@ button.addEventListener('click', function () {
     const userEmail = inputEmail.value.trim();
     console.log(userEmail);
     // 3b - Validazione degli input raccolti;
-    if(!userEmail) {
+    if(!userEmail || !isNaN(userEmail)) {
         alert('Devi inserire un indirizzo email');
         return;
     }
     // 3c - Creo il ciclo for delle email autorizzate;
     let isAuthorized = false;
     for(i = 0; i < emailAuthorized.length; i++) {
+        // 3d - Genero un condizionale if riguardo il confronto tra le mail.
         if(emailAuthorized[i] === userEmail){
             isAuthorized = true;
         }
+    }
+    // 3e - Genero un condizionale if sul messaggio da mostrare;
+    if (isAuthorized) {
+        console.log("Benvenuto, la tua email è autorizzata all'accesso :)");
+    } else {
+        console.log("Spiacente, la tua email non è autorizzata all'accesso :(");
     }
 
 });
