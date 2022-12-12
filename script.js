@@ -74,12 +74,15 @@ stampa un messaggio appropriato sull’esito del controllo.
   3b - Validazione degli input raccolti;
   3c - Creo il ciclo for delle email autorizzate;
   3d - Genero un condizionale if riguardo il confronto tra le mail.
+  3e - Svuoto il campo;
 4 - Stampo un messaggio sull'esito del controllo;
+
 */
 
 // 1 - Prendo gli elementi dal DOM;
 const inputEmail = document.getElementById('email');
 const button = document.getElementById('button');
+const message = document.getElementById('message');
 
 // 2 - Crea un array con tre email autorizzate;
 const emailAuthorized = [
@@ -94,11 +97,19 @@ button.addEventListener('click', function () {
     // 3a - Recupero valore dell'input;
     const userEmail = inputEmail.value.trim();
     console.log(userEmail);
-    // 3a2 - Validazione degli input raccolti;
+    // 3b - Validazione degli input raccolti;
     if(!userEmail) {
         alert('Devi inserire un indirizzo email');
         return;
     }
+    // 3c - Creo il ciclo for delle email autorizzate;
+    let isAuthorized = false;
+    for(i = 0; i < emailAuthorized.length; i++) {
+        if(emailAuthorized[i] === userEmail){
+            isAuthorized = true;
+        }
+    }
+
 });
 
 
