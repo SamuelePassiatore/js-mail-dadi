@@ -24,8 +24,19 @@ const resultElement = document.getElementById('result');
 const player = [];
 const cpu = [];
 
+// 3 - Genero due numeri randomici, da 1 a 6, uno per il giocatore e l'altro per il computer.
+let content = '';
+for (let i = 0; i < 1; i++) {
+    let randomNumbers = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    // 4 - Inserisco i due numeri all'interno dell'array attraverso la proprietà push.
+    player.push(randomNumbers);
+    console.log(player);
+}
 
-
-
-
+for (let i = 0; i < 1; i++) {
+    let randomNumbers = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    // 4 - Inserisco i due numeri all'interno dell'array attraverso la proprietà push.
+    cpu.push(randomNumbers);
+    console.log(cpu);
+}
 
