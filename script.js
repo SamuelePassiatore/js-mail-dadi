@@ -40,3 +40,31 @@ for (let i = 0; i < 1; i++) {
     console.log(cpu);
 }
 
+// 5 - Genero un condizionale if, in cui il vincitore è colui che ha ottenuto il punteggio più alto.
+if (player > cpu) {
+    content += ("Il giocatore vince!");
+  } else if (player < cpu) {
+    content += ("Il computer vince!");
+  } else {
+    content += ("Pareggio!");
+  }
+  console.log(content);
+
+// 6 - Stampo in pagina i due numeri e il risultato.
+  playerNumber.innerHTML = player;
+  cpuNumber.innerHTML = cpu;
+  resultElement.innerHTML = content;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
