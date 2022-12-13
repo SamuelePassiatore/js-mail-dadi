@@ -8,11 +8,9 @@ Stampiamo in pagina i due tiri e il risultato.
 
 /* 
 1 - Prendo gli elementi dal DOM;
-2 - Creo due array, uno per il giocatore e l'altro per il computer.
-3 - Genero due numeri randomici, da 1 a 6, uno per il giocatore e l'altro per il computer.
-4 - Inserisco i due numeri all'interno dell'array attraverso la proprietà push.
-5 - Genero un condizionale if, in cui il vincitore è colui che ha ottenuto il punteggio più alto.
-6 - Stampo in pagina i due numeri e il risultato.
+2 - Genero due numeri randomici, da 1 a 6, uno per il giocatore e l'altro per il computer.
+3 - Genero un condizionale if, in cui il vincitore è colui che ha ottenuto il punteggio più alto.
+4 - Stampo in pagina i due numeri e il risultato.
 */
 
 // 1 - Prendo gli elementi dal DOM;
@@ -20,40 +18,25 @@ const playerNumber = document.getElementById('player-number');
 const cpuNumber = document.getElementById('cpu-number');
 const resultElement = document.getElementById('result');
 
-// 2 - Creo due array, uno per il giocatore e l'altro per il computer.
-const player = [];
-const cpu = [];
 
-// 3 - Genero due numeri randomici, da 1 a 6, uno per il giocatore e l'altro per il computer.
-let content = '';
-for (let i = 0; i < 1; i++) {
-    let randomNumbers = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-    // 4 - Inserisco i due numeri all'interno dell'array attraverso la proprietà push.
-    player.push(randomNumbers);
-    console.log(player);
-}
+// 2 - Genero due numeri randomici, da 1 a 6, uno per il giocatore e l'altro per il computer.
+const player = Math.floor(Math.random() * 6) + 1;
+const cpu = Math.floor(Math.random() * 6) + 1;
+console.log(player, cpu);
 
-for (let i = 0; i < 1; i++) {
-    let randomNumbers = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-    // 4 - Inserisco i due numeri all'interno dell'array attraverso la proprietà push.
-    cpu.push(randomNumbers);
-    console.log(cpu);
-}
-
-// 5 - Genero un condizionale if, in cui il vincitore è colui che ha ottenuto il punteggio più alto.
+// 3 - Genero un condizionale if, in cui il vincitore è colui che ha ottenuto il punteggio più alto.
+let content = "Pareggio!"
 if (player > cpu) {
-    content += ("Il giocatore vince!");
-  } else if (player < cpu) {
-    content += ("Il computer vince!");
-  } else {
-    content += ("Pareggio!");
-  }
-  console.log(content);
+  content = ("Il giocatore vince!");
+} else if (player < cpu) {
+  content = ("Il computer vince!");
+} 
+console.log(content);
 
-// 6 - Stampo in pagina i due numeri e il risultato.
-  playerNumber.innerHTML = 'Numero giocatore: ' + player;
-  cpuNumber.innerHTML = 'Numero cpu: ' + cpu;
-  resultElement.innerHTML = `<strong>${content}</strong>`;
+// 4 - Stampo in pagina i due numeri e il risultato.
+playerNumber.innerHTML = 'Numero giocatore: ' + player;
+cpuNumber.innerHTML = 'Numero cpu: ' + cpu;
+resultElement.innerHTML = `<strong>${content}</strong>`;
 
 
 /****************************************
@@ -101,7 +84,7 @@ button.addEventListener('click', function () {
     console.log(userEmail);
 
     // 3b - Validazione degli input raccolti;
-    if(!userEmail || !isNaN(userEmail)) {
+    if(!userEmail) {
         alert('Devi inserire un indirizzo email');
         return;
     }
