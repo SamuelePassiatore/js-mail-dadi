@@ -91,7 +91,7 @@ button.addEventListener('click', function () {
 
     // 3c - Creo il ciclo for delle email autorizzate;
     let isAuthorized = false;
-    for(i = 0; i < emailAuthorized.length; i++) {
+    for(i = 0; i < emailAuthorized.length && !isAuthorized; i++) {
         // 3d - Genero un condizionale if riguardo il confronto tra le mail.
         if(emailAuthorized[i] === userEmail){
             isAuthorized = true;
